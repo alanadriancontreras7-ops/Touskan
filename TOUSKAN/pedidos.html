@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Touskan - Pedido</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="pedidos.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+    <nav class="navbar navbar-light bg-white border-bottom">
+        <div class="container-fluid px-4">
+
+            <div class="d-flex align-items-center gap-3">
+
+                <a class="navbar-brand logo" href="/index.html">
+                    Touskan
+                </a>
+
+            </div>
+
+            <div class="nav-links d-none d-md-flex align-items-center gap-4">
+                <a href="#">
+                    🍴 &nbsp; Menú
+                </a>
+                <a href="#">
+                    ▣ &nbsp; Orders
+                </a>
+                <a href="#">
+                    ⓘ &nbsp; Soporte
+                </a>
+                <a href="#">
+                    ♧ &nbsp; Admin
+                </a>
+            </div>
+
+
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main class="container-fluid px-4 px-md-5 py-4">
+
+        <div class="row g-4">
+
+            <!-- =====================
+                 COLUMNA IZQUIERDA
+            ====================== -->
+            <div class="col-lg-8">
+
+    <h5 class="section-title mb-4">
+        Tu Pedido
+        (<span id="cantidadArticulos">0</span> artículos)
+    </h5>
+
+
+    <!-- AQUÍ JAVASCRIPT MOSTRARÁ LOS PRODUCTOS -->
+
+    <div id="listaCarrito">
+
+    </div>
+
+
+    <!-- COMPLETA TU MENÚ -->
+
+    <div class="extras">
+
+        <div class="extras-title">
+
+            🔥 &nbsp; COMPLETA TU MENÚ
+
+        </div>
+
+
+        <div class="extras-buttons">
+
+            <button
+                class="extra-btn"
+                onclick="agregarProducto(
+                    'Bebida Refrescante',
+                    2.99,
+                    '',
+                    'Bebida fría refrescante'
+                )">
+
+                ⊕ &nbsp;
+                Bebida Refrescante
+
+                <strong>
+                    $2.99
+                </strong>
+
+            </button>
+
+
+            <button
+                class="extra-btn"
+                onclick="agregarProducto(
+                    'Salsa Barbacoa',
+                    0.99,
+                    '',
+                    'Salsa barbacoa especial'
+                )">
+
+                ⊕ &nbsp;
+                Salsa Barbacoa
+
+                <strong>
+                    $0.99
+                </strong>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                
+          <!-- == COLUMNA DERECHA === -->
+<div class="col-lg-4">
+
+    <div class="summary-card">
+
+        <h4>
+            Resumen del Pedido
+        </h4>
+
+        <hr>
+
+
+        <div class="summary-row">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="subtotal">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Impuestos (ITBIS)
+            </span>
+
+            <strong id="impuestos">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Costo de Envío
+            </span>
+
+            <strong id="envio">
+                $3.50
+            </strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="total-row">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="total">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <button class="checkout-btn">
+
+            Proceder al Pago
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+
+        <div class="secure-payment">
+
+            🔒 Pago 100% seguro y encriptado
+
+        </div>
+
+         </div>
+
+       </div>
+    </main>
+
+
+    
+ <script src="java.js"></script>
+</body>
+</html>
